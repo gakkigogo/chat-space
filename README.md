@@ -4,20 +4,22 @@
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|nickname|string|null: false|
+|nickname|string|null: false,index: true|
 ### Association
 - has_many :messages
-- has_many :groups, through :users_groups
+- has_many :user_groups
+- has_many :groups, through :user_groups
 
-## groupテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 ### Association
-- has_many :users, through :users_groups
+- has_many :user_groups
+- has_many :user, through :user_groups
 - has_many :messages
 
-## messageテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |body|text||
