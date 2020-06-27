@@ -117,6 +117,7 @@
   width: calc(100vw - 300px);
   padding: 35px 40px 0;
   &__box{
+    margin-bottom: 12px;
     display: flex;
     &__username{
       color: #333333;
