@@ -1,0 +1,37 @@
+.Main
+  .Main__group
+    .Main__group__info
+      .Main__group__info__list test
+      %ul.Main__group__info__list__member
+        member 
+        %li.Main__group__info__member__name
+        aiueo
+
+    = link_to "#", class: 'Main__group__info__link' do
+      Edit
+
+  .Main__message__list
+    .Main__message__list__box
+      .Main__message__list__box__username
+        BANGBANG
+      .Main__message__list__box__date
+        1999
+    .Main__message__list__small 
+      .Main__message__list__small__contet
+        BOWBOW
+    .Main__message__list__box
+      .Main__message__list__box__username
+        BANGBANG
+      .Main__message__list__box__date
+        1999
+    .Main__message__list__small
+      .Main__message__list__small__contet
+        BOWBOW 
+
+  .Main__message__form
+    .Main__message__form__big__form
+      %input{type: 'text', class: 'Main__message__form__big__form__text', placeholder: 'type a message' }
+      %label{class: "Main__message__form__big__form__label"}
+        = icon("far", "image", class: 'Main__message__form__big__form__label__image')
+        %input{type: "file", class: 'Main__message__form__big__form__label__file'}
+    %input{type: 'submit', class: 'Main__message__form__send'}
