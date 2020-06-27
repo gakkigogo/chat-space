@@ -1,36 +1,37 @@
-.main
-  .main-group-info
-    .group-info
-      .main-group-name test
-      %ul.member-list 
+.Main
+  .Main__group
+    .Main__group__info
+      .Main__group__info__list test
+      %ul.Main__group__info__list__member
         member 
-        %li.member-name aiueo
+        %li.Main__group__info__member__name
+        aiueo
 
-    = link_to "#", class: 'link' do
+    = link_to "#", class: 'Main__group__info__link' do
       Edit
 
-  .main-message-list
-    .message-box
-      .message-username
+  .Main__message__list
+    .Main__message__list__box
+      .Main__message__list__box__username
         BANGBANG
-      .message-date
+      .Main__message__list__box-date
         1999
-    .message 
-      .message-contet
+    .Main__message__list__box__message 
+      .Main__message__list__box__message__contet
         BOWBOW
-    .message-box
-      .message-username
+    .Main__message__list__box
+      .Main__message__list__box__username
         BANGBANG
-      .message-date
+      .Main__message__list__box-date
         1999
-    .message 
-      .message-contet
+    .Main__message__list__box__message 
+      .Main__message__list__box__message__contet
         BOWBOW 
 
-  .main-message-form
-    .big-text
-      %input{type: 'text', class: 'text', placeholder: 'type a message' }
-      %label{class: "label"}
-        = icon("far", "image", class: 'image')
-        %input{type: "file", class: 'file'}
-    %input{type: 'submit', class: 'send'}
+  .Main__message__form
+    .Main__message__form__big__form
+      %input{type: 'text', class: 'Main__message__form__big__form__text', placeholder: 'type a message' }
+      %label{class: "Main__message__form__big__form__label"}
+        = icon("far", "image", class: 'Main__message__form__big__form__label__image')
+        %input{type: "file", class: 'Main__message__form__big__form__label__file'}
+    %input{type: 'submit', class: 'Main__message__form__send'}
