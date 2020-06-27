@@ -116,32 +116,24 @@
   height: calc(100vh - 190px);
   width: calc(100vw - 300px);
   padding: 35px 40px 0;
-  &__message__list__box{
+  &__box{
     display: flex;
     &__username{
       color: #333333;
       font-size: 16px;
-      &__date{
-        color: #999999;
-        font-size: 12px;
-        padding-left: 10px;
-      }
+    }
+    &__date{
+      color: #999999;
+      font-size: 12px;
+      padding-left: 10px;
     }
   }
-  &__message__list__box__message {
+  &__small{
     padding-bottom: 46px;
     &__contet{
       color: #434A54;
       font-size: 14px;
     }
-  }
-}
-
-.Main__message__list__box__message {
-  padding-bottom: 46px;
-  &__contet{
-    color: #434A54;
-    font-size: 14px;
   }
 }
 
