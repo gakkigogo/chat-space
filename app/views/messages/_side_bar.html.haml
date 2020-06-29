@@ -1,11 +1,15 @@
 .Sidebar
   .Sidebar__content
     .Sidebar__content__top
-      .Sidebar__content__top__user-name masa
-      .Sidebar__content__top__icon
-        = link_to "＃"
-        = icon("far", "edit", class: 'Sidebar__content__top__icon__writing')
-        = icon("fas", "cog", class: 'Sidebar__content__top__icon__gear')
+      .Sidebar__content__top__user-name
+        = current_user.name
+      %ul.Sidebar__content__top__icon
+        %li.edit_icon
+        = link_to "＃" do
+          = icon("far", "edit", class: 'writing_icon')
+        %li.cog_icon
+        = link_to edit_user_path(current_user) do
+          = icon("fas", "cog", class: 'gear_icon')
        
   .Sidebar-groups
     .Sidebar-groups__list
