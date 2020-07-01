@@ -1,36 +1,24 @@
 .Main
   .Main__group
     .Main__group__info
-      .Main__group__info__list test
+      .Main__group__info__list
+        = @group.name
       %ul.Main__group__info__list__member
-        member 
+        Member 
         %li.Main__group__info__member__name
-
-    = link_to "#", class: 'Main__group__info__link' do
+          - @group.users.each do |user|
+            =user.name
+    = link_to edit_group_path(@group),class: 'link' do
       Edit
 
-  .Main__message__list
-    .Main__message__list__box
-      .Main__message__list__box__username
-        BANGBANG
-      .Main__message__list__box__date
-        1999
-    .Main__message__list__small 
-      .Main__message__list__small__contet
-        BOWBOW
-    .Main__message__list__box
-      .Main__message__list__box__username
-        BANGBANG
-      .Main__message__list__box__date
-        1999
-    .Main__message__list__small
-      .Main__message__list__small__contet
-        BOWBOW 
+  .MessageField
+    = render @messages
 
   .Main__message__form
-    .Main__message__form__big__form
-      %input{type: 'text', class: 'Main__message__form__big__form__text', placeholder: 'type a message' }
-      %label{class: "Main__message__form__big__form__label"}
-        = icon("far", "image", class: 'Main__message__form__big__form__label__image')
-        %input{type: "file", class: 'Main__message__form__big__form__label__file'}
-    %input{type: 'submit', class: 'Main__message__form__send'}
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+      .Main__message__form__big__form
+        = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
+        = f.label :image, class: 'Form__inputImage' do
+          = icon('far', 'image', class: 'Form__icon')
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'Form__submit'
