@@ -99,7 +99,7 @@
         }
       }
     }
-    &__info__link{
+    .link{
       display: block;
       color: #38aef0;
       border: 1px solid #38aef0;
@@ -114,31 +114,32 @@
 }
 
 
-.Main__message__list{
+.MessageField{
   background-color: #fafafa;
   height: calc(100vh - 190px);
   width: calc(100vw - 300px);
+  overflow: scroll;
   padding: 35px 40px 0;
-  &__box{
+  .MessageInfo{
     margin-bottom: 12px;
-    display: flex;
-    &__username{
+    display: flex;      
+    .MessageInfo__userName{
       color: #333333;
       font-size: 16px;
     }
-    &__date{
+    .MessageInfo__date{
       color: #999999;
       font-size: 12px;
       padding-left: 10px;
     }
   }
-  &__small{
-    padding-bottom: 46px;
-    &__contet{
-      color: #434A54;
-      font-size: 14px;
+    .Message{
+      padding-bottom: 46px;
+      .Message__content{
+        color: #434A54;
+        font-size: 14px;
+      }
     }
-  }
 }
 
 .Main__message__form{
@@ -149,30 +150,36 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px 10px 40px;
+  .Form{
+    width: calc(100vw - 300px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   &__big__form{
     width: 100%;
     position: relative;
-    &__text{
+    .Form__inputContent{
       border: none;
       height: 50px;
       width: 100%;
       padding: 0 10px;
     }
-    &__label{
+    .Form__inputImage{
       position: absolute;
       height: 50px;
       right: 10px;
       transform: translate(0, 25%);
-      &__image{
+      .Form__icon{
         line-height: 50px;
         font-size: 25px;
       }
-      &__file{
+      .Hidden{
         display: none;
       }
     }
   }
-  &__send{
+  .Form__submit{
     background-color: #38AEF0;
     border: none;
     color: #fff;
