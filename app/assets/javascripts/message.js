@@ -10,6 +10,7 @@ $(function(){
             <div class="MessageInfo__date">
               ${message.created_at}
             </div>
+            
           </div>
           <div class="Message">
             <p class="Message__content">
